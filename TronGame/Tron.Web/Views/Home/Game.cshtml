@@ -1,0 +1,16 @@
+﻿<input type="text" style="display:none;" id="playerName" value="@(ViewBag.playerName)" />
+<input type="text" style="display:none;" id="gameName" value="@(ViewBag.gameName)" />
+<div>
+    <canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
+</div>
+<div class="row">
+    <div class="col-12">
+        <a href="@Url.Action("Index","Home")" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/tron-game-view-engine.js"></script>
+    <script src="~/js/game-hub.js"></script>
+}
